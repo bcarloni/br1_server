@@ -9,7 +9,13 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/response"(controller:"response", parseRequest:true){
+		action = [GET:"index", POST:"postRefund", PUT:"notSupported", DELETE: "notSupported", OPTIONS:"notSupported"]
+		contrains {
+		}	
+	}
+
+	"/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
