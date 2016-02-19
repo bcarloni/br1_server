@@ -18,4 +18,3 @@ class UrlMappings {
                 "404"(view:'/notFound')
             }
         }
-}
