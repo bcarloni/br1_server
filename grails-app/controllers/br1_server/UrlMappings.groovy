@@ -4,13 +4,13 @@ class UrlMappings {
 
     static mappings = {
             "/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
-            }
-             "/response"(controller:"response", parseRequest:true){
-                action = [GET:"index", POST:"postRefund", PUT:"notSupported", DELETE: "notSupported", OPTIONS:"notSupported"]
-                contrains {
+                constraints {
+                    // apply constraints here
                 }
+            }
+
+             "/response"(controller:"response", parseRequest:true){
+                action = [GET:"index"]
             }
 
             "/"(view:"/index")
